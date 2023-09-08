@@ -14,7 +14,7 @@ class VendingMachine:
 
     def update_menu(self):
         product_df = pd.DataFrame(list(items_prices.items()), columns=['Products', 'Prices'])
-        product_df.index += 1  # Start index from 1
+        product_df.index += 1  
         self.gui.update_menu(product_df)
 
     def insert_coin(self, coin):
@@ -81,11 +81,11 @@ class VendingMachineGUI:
     def select_item(self):
         item_no = int(self.item_no_entry.get())
         self.vm.select_item(item_no)
-        self.item_no_entry.delete(0, tk.END)  # Clear the input box
+        self.item_no_entry.delete(0, tk.END)  
 
     def update_cart(self, cart):
         cart_df = pd.DataFrame(list(cart.items()), columns=['Products', 'Qty'])
-        cart_df.index += 1  # Start index from 1
+        cart_df.index += 1 
         self.cart_label['text'] = str(cart_df)
 
     def notify_insufficient_funds(self):
