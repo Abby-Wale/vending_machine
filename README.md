@@ -1,4 +1,5 @@
 Overview
+
 The Vending Machine Simulator is a Python application that simulates the functionality of a real-world vending machine. 
 The application is built using the Tkinter library for the graphical user interface (GUI) and Pandas for data manipulation. 
 It allows users to insert coins, select items, and complete transactions, all while updating the available items and balance in real-time.
